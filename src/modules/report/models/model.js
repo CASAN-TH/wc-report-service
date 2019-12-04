@@ -95,4 +95,83 @@ var ReportSchema = new Schema({
     }
 });
 
+var TopSeller = new Schema({
+    title: {
+        type: String
+    },
+    product_id: {
+        type: Number
+    },
+    quantity: {
+        type: Number
+    },
+
+});
+
+var CouponsTotals = new Schema({
+    slug: {
+        type: String
+    },
+    name: {
+        type: String
+    },
+    total: {
+        type: Number
+    }
+});
+
+var CustomersTotals = new Schema({
+    slug: {
+        type: String
+    },
+    name: {
+        type: String
+    },
+    total: {
+        type: Number
+    }
+});
+
+var OrdersTotals = new Schema({
+    slug: {
+        type: String
+    },
+    name: {
+        type: String
+    },
+    total: {
+        type: Number
+    }
+});
+
+var ProductsTotals = new Schema({
+    slug: {
+        type: String
+    },
+    name: {
+        type: String
+    },
+    total: {
+        type: Number
+    }
+});
+
+var ReviewsTotals = new Schema({
+    slug: {
+        type: String
+    },
+    name: {
+        type: String
+    },
+    total: {
+        type: Number
+    }
+});
+
 mongoose.model("Report", ReportSchema);
+mongoose.model("Topseller", TopSeller);
+mongoose.model("Coupon", CouponsTotals);
+mongoose.model("Customer", CustomersTotals);
+mongoose.model("Order", OrdersTotals);
+mongoose.model("Product", ProductsTotals);
+mongoose.model("Review", ReviewsTotals);
